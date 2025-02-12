@@ -7,8 +7,26 @@ $btn-border-width: 3px;
 $btn-mb: 0.5rem;
 $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
+#sidebar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background: url('/assets/img/custom-blog/beach.jpeg') center;
+  opacity: 0.7; /* 원하는 투명도 조절 */
+  z-index: -1; /* 요소 뒤로 배치 */
+}
 #sidebar {
   @include mx.pl-pr(0);
+
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.37); /* 그림자 더 진하고 넓게 */
+  background-color: rgba(0, 0, 0, 0.2); /* 가독성을 위한 얇은 배경 */
+  padding: 4px 8px;
+  border-radius: 5px;
+
 
   position: fixed;
   top: 0;
@@ -16,7 +34,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   height: 100%;
   overflow-y: auto;
   width: v.$sidebar-width;
-  background: var(--sidebar-bg);
+  /*background: var(--sidebar-bg);*/
   border-right: 1px solid var(--sidebar-border-color);
 
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -107,10 +125,11 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     margin-bottom: 0.5rem;
     width: fit-content;
     color: var(--site-title-color);
+    text-shadow: -5px -7px 12px rgba(0, 0, 0, .9);
   }
 
   .site-subtitle {
-    font-size: 95%;
+    font-size: 90%;
     color: var(--site-subtitle-color);
     margin-top: 0.25rem;
     word-spacing: 1px;
@@ -118,6 +137,8 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    text-shadow: -1px 2px 12px rgba(255, 255, 255, 1);
+    font-weight: 700;
   }
 
   ul {
@@ -161,7 +182,6 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
         .nav-link {
           color: var(--sidebar-active-color);
           background-color: var(--sidebar-hover-bg);
-
           span {
             opacity: 1;
           }
@@ -199,7 +219,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       justify-content: center;
 
       &:not(:focus-visible) {
-        box-shadow: var(--sidebar-border-color) 0 0 0 1px;
+        //box-shadow: var(--sidebar-border-color) 0 0 0 1px;
       }
 
       &:hover {

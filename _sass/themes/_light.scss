@@ -33,7 +33,7 @@
   );
 
   /* Sidebar */
-  --site-title-color: rgb(113, 113, 113);
+  /*--site-title-color: rgb(113, 113, 113);
   --site-subtitle-color: #717171;
   --sidebar-bg: #f6f8fa;
   --sidebar-border-color: #efefef;
@@ -42,7 +42,17 @@
   --sidebar-hover-bg: rgb(223, 233, 241, 0.64);
   --sidebar-btn-bg: white;
   --sidebar-btn-color: #8e8e8e;
-  --avatar-border-color: white;
+  --avatar-border-color: white;*/
+  --site-title-color: #f8f9fa;
+  --site-subtitle-color: #163e42; /* 연한 하늘색 */
+  --sidebar-bg: rgba(0, 30, 60, 0.85); /* 어두운 네이비 반투명 - 물 배경과 조화 */
+  --sidebar-border-color: #9fbbdc; /* 연한 하늘색 - 강조 */
+  --sidebar-muted-color: #0f3033; /* 중간 회색 */
+  --sidebar-active-color: #165157; /* 강조 색 유지 */
+  --sidebar-hover-bg: rgba(255, 255, 255, 0.5); /* 살짝 밝아지는 효과 */
+  --sidebar-btn-bg: #165157; /* 짙은 하늘색 - 버튼 가독성 */
+  --sidebar-btn-color: #ffffff; /* 버튼 글자 흰색 */
+  --avatar-border-color: #ffffff; /* 프로필 사진 강조 */
 
   /* Topbar */
   --topbar-bg: rgb(255, 255, 255, 0.7);
