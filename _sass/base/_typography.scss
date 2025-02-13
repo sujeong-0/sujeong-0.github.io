@@ -107,6 +107,20 @@ kbd {
   box-shadow: inset 0 -2px 0 var(--kbd-wrap-color);
 }
 
+question::before {
+  content:  "\2753";
+}
+question {
+  vertical-align: middle;
+  line-height: 1.3rem;
+  min-width: 1.75rem;
+  text-align: center;
+  padding: .2rem;
+  background-color: var(--questino-bg-color);
+  border-radius: v.$radius-sm;
+  border: solid 1px  var(--questino-border-color);
+}
+
 hr {
   border-color: var(--main-border-color);
   opacity: 1;

@@ -238,6 +238,16 @@ main {
     margin-bottom: 0;
     white-space: pre-line;
   }
+
+  blockquote.prompt-question::before {
+    content:  "\f059";
+    color: var(--prompt-question-icon-color);
+    font: var(--fa-font-regular);
+  }
+  .prompt-question {
+    background-color: var(--prompt-question-bg);
+  }
+
 } /* .content */
 
 .content > p {

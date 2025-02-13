@@ -82,6 +82,11 @@
   --kbd-wrap-color: #bdbdbd;
   --kbd-text-color: var(--text-color);
   --kbd-bg-color: white;
+  --questino-bg-color: #ffd97273;
+  --questino-border-color: #ffd9728c;
+
+
+
   --prompt-text-color: rgb(46, 46, 46, 0.77);
   --prompt-tip-bg: rgb(123, 247, 144, 0.2);
   --prompt-tip-icon-color: #03b303;
@@ -91,6 +96,8 @@
   --prompt-warning-icon-color: #ef9c03;
   --prompt-danger-bg: rgb(248, 215, 218, 0.56);
   --prompt-danger-icon-color: #df3c30;
+  --prompt-question-bg: rgb(255, 243, 205);
+  --prompt-question-icon-color: #ef9c03;
 
   /* Tags */
   --tag-border: #dee2e6;
