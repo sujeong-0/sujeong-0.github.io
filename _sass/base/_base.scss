@@ -133,6 +133,7 @@ main {
   font-size: 1.08rem;
   margin-top: 2rem;
   overflow-wrap: break-word;
+  word-break: keep-all;
 
   @include bp.xl {
     font-size: 1.03rem;
@@ -210,6 +211,17 @@ main {
 
   dl > dd {
     margin-left: 1rem;
+    margin-bottom: 0;
+    white-space: pre-line;
+    position: relative;
+    padding-left: 13px; /* 마커와 텍스트 사이 간격 */
+  }
+  dl > dd::before {
+    content: ':';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
   }
 
   ::marker {
@@ -221,7 +233,16 @@ main {
       min-width: 70%;
     }
   }
+
+  blockquote > p{
+    margin-bottom: 0;
+    white-space: pre-line;
+  }
 } /* .content */
+
+.content > p {
+  white-space: pre-line;
+}
 
 .tag:hover {
   @extend %tag-hover;

@@ -19,9 +19,11 @@
 
         main & {
           @if $i == 2 {
-            margin: 2.5rem 0 1.25rem;
+            margin: 7rem 0 1.25rem;
+            color: #1b555c;
+            font-weight: 700;
           } @else {
-            margin: 2rem 0 1rem;
+            margin: 2rem 0 0.4rem;
           }
         }
       }
