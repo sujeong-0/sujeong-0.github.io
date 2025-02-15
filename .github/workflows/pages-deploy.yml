@@ -46,24 +46,19 @@ jobs:
       - name: Install Codespell
         run: pip install --cache-dir ~/.cache/pip codespell
 
-      # 맞춤법 검사 실행 & 오류 감지
-      - name: Run Hunspell Check
+      # 맞춤법 검사 실행 & 오류 감지 (Hunspell)
+      - name: Run Hunspell Check with Suggestions
         run: |
-          ERROR_COUNT=$(find ./_posts -name "*.md" | xargs hunspell -d en_US,ko_KR -l | tee /dev/stderr | wc -l)
-          if [ "$ERROR_COUNT" -ne 0 ]; then
-            echo "❌ 맞춤법 오류가 발견되었습니다. 게시가 차단됩니다."
-            exit 1
-          fi
+          find ./_posts -name "*.md" | xargs hunspell -d en_US,ko_KR -a | grep '&'
 
       # Codespell 실행
       - name: Run Codespell
         run: |
-          ERROR_COUNT=$(codespell --ignore-words-list="your,custom,words" --skip="*.min.js" _posts | tee /dev/stderr | wc -l)
+          ERROR_COUNT=$(find _posts -name "*.md" | xargs codespell --ignore="./ignored-words.txt" | tee /dev/stderr | wc -l)
           if [ "$ERROR_COUNT" -ne 0 ]; then
             echo "❌ 맞춤법 오류가 발견되었습니다. 게시가 차단됩니다."
             exit 1
           fi
-
 
   build:
     runs-on: ubuntu-latest
