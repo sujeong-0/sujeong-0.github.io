@@ -29,12 +29,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      # Hunspell 설치 (한국어 & 영어 맞춤법 검사)
-      - name: Install Hunspell
+      - name: Install Hunspell- Python 패키지 캐싱 (codespell 속도 향상)
         run: sudo apt-get install -y hunspell hunspell-en-us hunspell-ko
 
-      # Python 패키지 캐싱 (codespell 속도 향상)
-      - name: Cache Python Dependencies
+      - name: Cache Python Dependencies-  Python 패키지 캐싱 (codespell 속도 향상)
         uses: actions/cache@v3
         with:
           path: ~/.cache/pip
@@ -42,17 +40,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      # Codespell 설치 (캐싱된 패키지 활용)
-      - name: Install Codespell
+      - name: Install Codespell- Codespell 설치 (캐싱된 패키지 활용)
         run: pip install --cache-dir ~/.cache/pip codespell
 
-      # 맞춤법 검사 실행 & 오류 감지 (Hunspell)
-      - name: Run Hunspell Check with Suggestions
+      - name: Run Hunspell Check with Suggestions - 맞춤법 검사 실행 & 오류 감지 (Hunspell)
         run: |
           find ./_posts -name "*.md" | xargs hunspell -d en_US,ko_KR -a | grep '&'
 
-      # Codespell 실행
-      - name: Run Codespell
+      - name: Run Codespell- Codespell 실행
         run: |
           ERROR_COUNT=$(find _posts -name "*.md" | xargs codespell --ignore="./ignored-words.txt" | tee /dev/stderr | wc -l)
           if [ "$ERROR_COUNT" -ne 0 ]; then
@@ -62,6 +57,7 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    needs: spellcheck
 
     steps:
       - name: Checkout
