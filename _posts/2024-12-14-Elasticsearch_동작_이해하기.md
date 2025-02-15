@@ -4,8 +4,8 @@ description: >-
   elasticsearch 대해 정확하게 알기 위해 <kbd>ElasticSearch Essential(강진우)</kbd>강의를 들으며 공부한 내용을 정리
 author: ggong
 date: 2024-12-14 08:45:00 +0800
-categories: [online-course, elasticSearch]
-tags: [online-course, inflean, elasticSearch, study]
+categories: [online-course, elasticsearch]
+tags: [online-course, elasticsearch, study]
 pin: true
 media_subpath: '/assets/img/elasticsearch'
 ---
