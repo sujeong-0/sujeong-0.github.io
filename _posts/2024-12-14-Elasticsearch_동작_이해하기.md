@@ -1,17 +1,17 @@
 ---
 title: ElasticSearch Essential - 03 동작 이해하기
 description: >-
-  elasticsearch 대해 정확하게 알기 위해 <kbd>ElasticSearch Essential(강진우)</kbd>강의를 들으며 공부한 내용을 정리
+  색인, 검색의 기본적인 동작 원리 이해
 author: ggong
 date: 2024-12-14 08:45:00 +0800
 categories: [online-course, elasticsearch]
 tags: [online-course, elasticsearch, study]
-pin: true
+pin: false
 media_subpath: '/assets/img/elasticsearch'
+references:
+  - name: "ElasticSearch Essential(강진우)"
+    url: "https://www.inflearn.com/course/elasticsearch-essential"
 ---
-
-> 주요 내용: 색인, 검색의 기본적인 동작 원리 이해
-{: .prompt-info }
 
 
 ## 색인 과정 이해하기

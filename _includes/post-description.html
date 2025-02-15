@@ -6,11 +6,12 @@
 
 {%- capture description -%}
 {%- if post.description -%}
-  {{- post.description -}}
+  {%- if post.description contains "<" and post.description contains ">" -%}
+    {{- post.description }}  {%- comment -%} HTML이 포함된 경우 그대로 출력 {%- endcomment -%}
+  {%- else -%}
+    {{- post.description | escape }}  {%- comment -%} HTML이 없으면 안전하게 escape 처리 {%- endcomment -%}
+  {%- endif -%}
 {%- else -%}
-  {% comment %}
-    Remove the line number of the code snippet.
-  {% endcomment %}
   {% assign content = post.content %}
 
   {% if content contains '<td class="rouge-gutter gl"><pre class="lineno">' %}
@@ -22,4 +23,4 @@
 {%- endif -%}
 {%- endcapture -%}
 
-{{- description | strip | truncate: max_length | escape -}}
+{{- description | strip | truncate: max_length }}

@@ -1,18 +1,18 @@
 ---
 title: ElasticSearch Essential - 02 살펴보기
 description: >-
-  elasticsearch 대해 정확하게 알기 위해 <kbd>ElasticSearch Essential(강진우)</kbd>강의를 들으며 공부한 내용을 정리
+  클러스터, 노드, 인덱스, 샤드, 매핑에 대한 이해
 author: ggong
 date: 2024-12-11 08:45:00 +0800
 categories: [online-course, elasticsearch]
 tags: [online-course, elasticsearch, study]
-pin: true
+pin: false
 media_subpath: '/assets/img/elasticsearch'
+references:
+  - name: "ElasticSearch Essential(강진우)"
+    url: "https://www.inflearn.com/course/elasticsearch-essential"
 ---
 
-
-> 주요 내용 : 클러스터, 노드, 인덱스, 샤드, 매핑에 대한 이해
-{: .prompt-info }
 
 ## Elasticsearch 소개
 
@@ -232,3 +232,6 @@ ex) 실수 타입의 기본형이 `float`이지만, `double`로 지정해야 할
 ex) `text`필드는 자동으로 `keyword` 타입이 생성되는데 `keyword` 가 사용되지 않아 막고싶을때
 
 일부 필드만 정적 매핑으로 지정한다면, 나머지 필드들은 동적매핑으로 진행된다.
+
+
+
