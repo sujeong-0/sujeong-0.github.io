@@ -23,6 +23,48 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Hunspell 설치 (한국어 & 영어 맞춤법 검사)
+      - name: Install Hunspell
+        run: sudo apt-get install -y hunspell hunspell-en-us hunspell-ko
+
+      # Python 패키지 캐싱 (codespell 속도 향상)
+      - name: Cache Python Dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      # Codespell 설치 (캐싱된 패키지 활용)
+      - name: Install Codespell
+        run: pip install --cache-dir ~/.cache/pip codespell
+
+      # 맞춤법 검사 실행 & 오류 감지
+      - name: Run Hunspell Check
+        run: |
+          ERROR_COUNT=$(find ./_posts -name "*.md" | xargs hunspell -d en_US,ko_KR -l | tee /dev/stderr | wc -l)
+          if [ "$ERROR_COUNT" -ne 0 ]; then
+            echo "❌ 맞춤법 오류가 발견되었습니다. 게시가 차단됩니다."
+            exit 1
+          fi
+
+      # Codespell 실행
+      - name: Run Codespell
+        run: |
+          ERROR_COUNT=$(codespell --ignore-words-list="your,custom,words" --skip="*.min.js" _posts | tee /dev/stderr | wc -l)
+          if [ "$ERROR_COUNT" -ne 0 ]; then
+            echo "❌ 맞춤법 오류가 발견되었습니다. 게시가 차단됩니다."
+            exit 1
+          fi
+
+
   build:
     runs-on: ubuntu-latest
 
