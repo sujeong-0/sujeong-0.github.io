@@ -19,7 +19,7 @@ references:
 ### Elasticsearch
 
 **Elasticsearch**
-: elasticsearch는 <question>루씬(Lucene)</question> 이라는 라이브러리를 이용해 만들어진 거대 애플리케이션이다.
+: elasticsearch는  [루씬(Lucene)](#elasticsearch-루씬){: .question } 이라는 라이브러리를 이용해 만들어진 거대 애플리케이션이다.
 : JSON 기반의 문서를 저장하고, 검색할 수 있으며 분석 작업도 가능하다.
 
 > **루씬(Lucene)**
@@ -27,7 +27,7 @@ references:
 : 문서를 색인하고 검색하는 기능을 제공한다. 
 : 데이터베이스가 아닌, 검색 기능을 위한 라이브러리이다.
 : elasticsearch, Solr 같은 검색 엔진의 핵심 기술이다.
-{: .prompt-question }
+{: .prompt-question id="elasticsearch-루씬"}
 
 ### Elasticsearch 특징
 
@@ -194,12 +194,12 @@ client의 요청이 마스터 노드가 아닌, 실제 데이터를 가지고 �
 : 문서가 샤드에 저장되는 순서, 저장되는 방법을 의미한다.
 : 라우팅 룰 계산식(`Routing Rule = (문서의 ID) % (샤드의 개수)`)으로 이용해 여러개의 샤드에 문서가 고르게 저장된다.
 : **그러나 중간에 샤드의 개수가 바뀐다면, 문서가 저장되는 규칙이 완전히 바뀌게된다.**
-= <question>인덱스 생성 이후 샤드의 개수를 바꿀 수 없는 이유</question>
+=  [인덱스 생성 이후 샤드의 개수를 바꿀 수 없는 이유](#샤드-설정-변경불가-이유){: .question }
 
 > 인덱스 생성 이후 샤드의 개수를 바꿀 수 없다
 > 프라이머리 샤드는 인덱스 생성 후 변경할 수 없지만, 레플리카 샤드는 변경할 수 있다.
 > 위 설명에서 말한 샤드는 모두 프라이머리 샤드를 기준으로 생각하면 된다.
-{: .prompt-question }
+{: .prompt-question id="샤드-설정-변경불가-이유"}
 
 
 인덱스 템플릿
