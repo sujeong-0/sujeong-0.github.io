@@ -39,8 +39,7 @@ html {
 
 body {
   background: var(--main-bg);
-  padding: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
@@ -207,7 +206,9 @@ main {
       margin: 0 0.5rem 0.2rem -1.3rem;
       vertical-align: middle;
     }
-  } /* ul */
+  }
+
+  /* ul */
 
   dl > dd {
     margin-left: 1rem;
@@ -216,6 +217,7 @@ main {
     position: relative;
     padding-left: 13px; /* 마커와 텍스트 사이 간격 */
   }
+
   dl > dd::before {
     content: ':';
     position: absolute;
@@ -234,21 +236,24 @@ main {
     }
   }
 
-  blockquote > p{
+  blockquote > p {
     margin-bottom: 0;
     white-space: pre-line;
   }
 
   blockquote.prompt-question::before {
-    content:  "\f059";
+    content: "\f059";
     color: var(--prompt-question-icon-color);
     font: var(--fa-font-regular);
   }
+
   .prompt-question {
     background-color: var(--prompt-question-bg);
   }
 
-} /* .content */
+}
+
+/* .content */
 
 .content > p {
   white-space: pre-line;
@@ -348,6 +353,57 @@ main {
   display: block;
 
   @extend %img-caption;
+}
+
+.highlighter-rouge {
+
+  + .code-description {
+    margin-top: -15px; /* 특정한 경우 마진 줄이기 */
+  }
+
+  + p.code-description {
+    margin-bottom: 0.3rem;
+  }
+
+  + p.code-description > em {
+    display: block;
+    text-align: center;
+    font-style: normal;
+    font-size: 80%;
+    padding: 0;
+    color: #6d6c6c;
+  }
+
+  + p + ul.code-description {
+    margin-left: 1.5rem;
+  }
+
+  + p + ul.code-description > li {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  + p + ul.code-description > li::marker {
+    content: "line "
+  }
+
+  + p + ul.code-description > li > span,
+  + p + ul.code-description > li > dl > dt > span {
+    width: 30px;
+    display: inline-block;
+    margin-right: 6px;
+    color: #6d6c6c;
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  + p + ul.code-description > li > dl > * {
+    font-weight: 400;
+  }
+
+  + p + ul.code-description > li > dl > dd {
+      margin-left: 2.3rem;
+  }
 }
 
 /* --- Effects classes --- */

@@ -3,8 +3,8 @@ title: ElasticSearch Essential - 03 동작 이해하기
 description: >-
   색인, 검색의 기본적인 동작 원리 이해
 author: ggong
-date: 2024-12-14 08:45:00 +0800
-categories: [online-course, elasticsearch]
+date: 2024-12-14 08:45:00 +0900
+categories: [Online-course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
 media_subpath: '/assets/img/elasticsearch'

@@ -3,8 +3,8 @@ title: ElasticSearch Essential - 02 살펴보기
 description: >-
   클러스터, 노드, 인덱스, 샤드, 매핑에 대한 이해
 author: ggong
-date: 2024-12-11 08:45:00 +0800
-categories: [online-course, elasticsearch]
+date: 2024-12-11 08:45:00 +0900
+categories: [Online-course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
 media_subpath: '/assets/img/elasticsearch'
