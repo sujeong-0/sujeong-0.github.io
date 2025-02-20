@@ -247,10 +247,13 @@ main {
     font: var(--fa-font-regular);
   }
 
-  .prompt-question {
+  blockquote.prompt-question {
     background-color: var(--prompt-question-bg);
   }
 
+  blockquote.prompt-question > dl {
+    margin-bottom: 0;
+  }
 }
 
 /* .content */
