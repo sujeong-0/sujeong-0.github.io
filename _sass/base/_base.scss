@@ -320,14 +320,10 @@ main {
   }
 
 
-  /*p:has(.img-link.description-right) ~ hr.description{
-    margin-bottom: 0;
+  .description-left + .code-description,
+  .description-right + .code-description  {
+    width: 50%;
   }
-
-   hr.description ~ p:has(.img-link.description-right) {
-    margin-top: 0;
-  }*/
-
 }
 
 /* .content */
@@ -466,7 +462,7 @@ main {
 
   + p + ul.code-description > li > span,
   + p + ul.code-description > li > dl > dt > span {
-    width: 30px;
+    width: 50px;
     display: inline-block;
     margin-right: 6px;
     color: #6d6c6c;
