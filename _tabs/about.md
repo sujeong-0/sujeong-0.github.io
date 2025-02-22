@@ -34,8 +34,7 @@ order: 4
     <div class="grid grid-right text-grid-left">
     <br/>
     <ul>
-      <li>Phone: 010-5362-6425</li>
-      <li>Email: 0_sujeong@naver.com</li>
+      <li>E-mail: 0_sujeong@naver.com</li>
       <li>Github: <a href="https://github.com/sujeong-0">https://github.com/sujeong-0</a></li>
     </ul>
   </div>
