@@ -414,8 +414,7 @@ main {
     height: auto;
     max-width: 100%;
     max-height: 100%;
-    margin: auto;
-    margin-bottom: 0;
+    margin: auto auto 0;
   }
 
   @extend %img-caption;
@@ -452,8 +451,8 @@ main {
   }
 
   + p + ul.code-description > li {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   + p + ul.code-description > li::marker {
