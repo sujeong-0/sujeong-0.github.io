@@ -241,6 +241,10 @@ main {
     white-space: pre-line;
   }
 
+  blockquote.prompt-hidden {
+    display: none;
+  }
+
   blockquote.prompt-question::before {
     content: "\f059";
     color: var(--prompt-question-icon-color);
