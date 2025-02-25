@@ -4,10 +4,10 @@ description: >-
   트러블 슈팅의 방법을 알아보고, 다양한 트러블 슈팅 사례를 분석해보자. 
 author: ggong
 date: 2024-12-20 20:58:00 +0900
-categories: [Online-course, Elasticsearch]
+categories: [Online Course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
-media_subpath: '/assets/img/elasticsearch'
+media_subpath: '/assets/img/_posts/online-course/elasticsearch'
 references:
   - name: "ElasticSearch Essential(강진우)"
     url: "https://www.inflearn.com/course/elasticsearch-essential"

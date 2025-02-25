@@ -4,10 +4,10 @@ description: >-
   클러스터, 노드, 인덱스, 샤드, 매핑에 대한 이해
 author: ggong
 date: 2024-12-11 08:45:00 +0900
-categories: [Online-course, Elasticsearch]
+categories: [Online Course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
-media_subpath: '/assets/img/elasticsearch'
+media_subpath: '/assets/img/_posts/online-course/elasticsearch'
 references:
   - name: "ElasticSearch Essential(강진우)"
     url: "https://www.inflearn.com/course/elasticsearch-essential"

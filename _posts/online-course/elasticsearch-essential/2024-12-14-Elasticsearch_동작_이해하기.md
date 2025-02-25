@@ -4,10 +4,10 @@ description: >-
   색인, 검색의 기본적인 동작 원리 이해
 author: ggong
 date: 2024-12-14 08:45:00 +0900
-categories: [Online-course, Elasticsearch]
+categories: [Online Course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
-media_subpath: '/assets/img/elasticsearch'
+media_subpath: '/assets/img/_posts/online-course/elasticsearch'
 references:
   - name: "ElasticSearch Essential(강진우)"
     url: "https://www.inflearn.com/course/elasticsearch-essential"

@@ -4,10 +4,10 @@ description: >-
   cat API를 이용해 모니터링 하는 방법을 살펴보고, 주요 모니터링 지표를 살펴보자.
 author: ggong
 date: 2024-12-16 10:12:00 +0900
-categories: [Online-course, Elasticsearch]
+categories: [Online Course, Elasticsearch]
 tags: [online-course, elasticsearch, study]
 pin: false
-media_subpath: '/assets/img/elasticsearch'
+media_subpath: '/assets/img/_posts/online-course/elasticsearch'
 references:
   - name: "ElasticSearch Essential(강진우)"
     url: "https://www.inflearn.com/course/elasticsearch-essential"

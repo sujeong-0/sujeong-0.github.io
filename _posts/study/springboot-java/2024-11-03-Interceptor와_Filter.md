@@ -4,10 +4,10 @@ description: >-
   Interceptor와 Filter의 차이점을 알아보고, 각각 언제 사용하면 좋을지 알아보자.
 author: ggong
 date: 2024-11-03 16:02:00 +0900
-categories: [ Study, Springboot]
+categories: [ Study, Springboot Java]
 tags: [ study, springboot, topic ]
 pin: false
-media_subpath: '/assets/img/java'
+media_subpath: '/assets/img/_posts/study/springboot-java'
 references:
   - name: "[Spring] 필터(Filter) vs 인터셉터(Interceptor) 차이 및 용도 - (1)"
   - URL: "https://mangkyu.tistory.com/173"

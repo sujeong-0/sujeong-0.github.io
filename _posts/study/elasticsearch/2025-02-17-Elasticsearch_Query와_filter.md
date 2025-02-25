@@ -7,7 +7,7 @@ date: 2024-08-16 12:40:00 +0900
 categories: [ Study, Elasticsearch ]
 tags: [ study, elasticsearch, topic, filter, search ]
 pin: false
-media_subpath: '/assets/img/elasticsearch'
+media_subpath: '/assets/img/_posts/online-course/elasticsearch'
 references:
   - name: "Elasticsearch in Action"
     url: "http://www.acornpub.co.kr/book/elasticsearch-in-action-2e"
