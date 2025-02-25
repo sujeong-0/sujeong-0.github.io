@@ -450,19 +450,24 @@ main {
     color: #6d6c6c;
   }
 
+  + ul.code-description,
   + p + ul.code-description {
     margin-left: 1.5rem;
   }
 
+  + ul.code-description > li,
   + p + ul.code-description > li {
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  + p + ul.code-description > li::marker {
+  + ul.code-description > li::marker ,
+  + p + ul.code-description > li::marker ,{
     content: "line "
   }
 
+  + ul.code-description > li > span,
+  + ul.code-description > li > dl > dt > span,
   + p + ul.code-description > li > span,
   + p + ul.code-description > li > dl > dt > span {
     width: 50px;
@@ -473,10 +478,12 @@ main {
     user-select: none;
   }
 
+  + ul.code-description > li > dl > * ,
   + p + ul.code-description > li > dl > * {
     font-weight: 400;
   }
 
+  + ul.code-description > li > dl > dd,
   + p + ul.code-description > li > dl > dd {
       margin-left: 3.5rem;
   }
