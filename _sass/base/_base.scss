@@ -431,6 +431,24 @@ main {
   @extend %img-caption;
 }
 
+
+/** start: 코드박스 - noline */
+pre:has(.language-noline){
+  margin-top: .5rem;
+  margin-bottom: 1.2em;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: var(--language-border-color) 0 0 0 1px;
+  background-color: var(--highlight-bg-color);
+}
+pre:has(.language-noline).no-bg{
+  background-color: transparent;
+}
+/** end 코드박스 - noline */
+
+
+/** start: 코드박스 */
+pre:has(.language-noline),
 .highlighter-rouge {
 
   + .code-description {
@@ -488,6 +506,7 @@ main {
       margin-left: 3.5rem;
   }
 }
+/** end: 코드박스 */
 
 /* --- Effects classes --- */
 
