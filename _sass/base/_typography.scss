@@ -12,14 +12,14 @@
     }
 
     @if $i < 5 {
-      $size-factor: 0.25rem;
+      $size-factor: 0.5rem;
 
       @if $i > 1 {
-        $size-factor: 0.18rem;
+        $size-factor: 0.45rem;
 
         main & {
           @if $i == 2 {
-            margin: 7rem 0 1.25rem;
+            margin: 5rem 0 1.25rem;
             color: #1b555c;
             font-weight: 700;
           } @else {
@@ -32,7 +32,7 @@
         font-size: 1rem + (5 - $i) * $size-factor;
       }
     } @else {
-      font-size: 1.05rem;
+      font-size: 1.25rem;
     }
   }
 }
@@ -61,6 +61,10 @@ blockquote {
   padding-left: 1rem;
   color: var(--blockquote-text-color);
   margin-top: 0.5rem;
+
+  &:not([class]) {
+    font-size: 0.9rem;
+  }
 
   > p:last-child {
     margin-bottom: 0;

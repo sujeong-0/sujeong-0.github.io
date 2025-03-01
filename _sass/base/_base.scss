@@ -168,6 +168,10 @@ main {
         padding-left: 0.25rem;
       }
 
+      li:has(> strong):not(:has(> ol, > ul, > dl)){
+        white-space: break-spaces;
+      }
+
       ol,
       ul {
         -webkit-padding-start: 1.25rem;
@@ -363,6 +367,17 @@ main {
   color: transparent;
   display: inline-flex;
 }
+p:has(a.img-link){
+  &:has(.center){
+   align-content : center;
+  }
+  &:has(.right){
+    float: right;
+  }
+  &:has(.left){
+    float: left;
+  }
+}
 
 .shimmer {
   overflow: hidden;
@@ -450,16 +465,22 @@ pre:has(.language-noline).no-bg{
 /** start: 코드박스 */
 pre:has(.language-noline),
 .highlighter-rouge {
+  &.left,&.right{  /* 코드 박스 .left .right 있으면, 가로 반으로 줄이기 */
+    width: 47%;
+  }
+  &:has(+ p > em){ /* 코드 박스 아래 em 있으면, 코드박스 아래 margin 줄이기 */
+    margin-bottom: 0.3em;
+  }
 
   + .code-description {
     margin-top: -15px; /* 특정한 경우 마진 줄이기 */
   }
 
-  + p.code-description {
+  + p:has(em):not(:has(img)) {
     margin-bottom: 0.3rem;
   }
 
-  + p.code-description > em {
+  + p:has(em):not(:has(img)) > em {
     display: block;
     text-align: center;
     font-style: normal;
@@ -468,42 +489,39 @@ pre:has(.language-noline),
     color: #6d6c6c;
   }
 
+
   + ul.code-description,
-  + p + ul.code-description {
+  + p:nth-of-type(1) + ul.code-description {
     margin-left: 1.5rem;
-  }
 
-  + ul.code-description > li,
-  + p + ul.code-description > li {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+    > li {
+      margin-top: 0;
+      margin-bottom: 0;
 
-  + ul.code-description > li::marker ,
-  + p + ul.code-description > li::marker ,{
-    content: "line "
-  }
+      > span,
+      > dl > dt > span{
+        width: 50px;
+        display: inline-block;
+        margin-right: 6px;
+        color: #6d6c6c;
+        white-space: nowrap;
+        user-select: none;
+      }
 
-  + ul.code-description > li > span,
-  + ul.code-description > li > dl > dt > span,
-  + p + ul.code-description > li > span,
-  + p + ul.code-description > li > dl > dt > span {
-    width: 50px;
-    display: inline-block;
-    margin-right: 6px;
-    color: #6d6c6c;
-    white-space: nowrap;
-    user-select: none;
-  }
+      > dl {
+        > *{
+          font-weight: 400;
+        }
 
-  + ul.code-description > li > dl > * ,
-  + p + ul.code-description > li > dl > * {
-    font-weight: 400;
-  }
+        > dd{
+          margin-left: 3.5rem;
+        }
+      }
+    }
 
-  + ul.code-description > li > dl > dd,
-  + p + ul.code-description > li > dl > dd {
-      margin-left: 3.5rem;
+    > li::marker ,{
+      content: "line "
+    }
   }
 }
 /** end: 코드박스 */
