@@ -168,7 +168,7 @@ main {
         padding-left: 0.25rem;
       }
 
-      li:has(> strong):not(:has(> ol, > ul, > dl)){
+      li:has(> strong):not(:has(> ol, > ul, > dl)) {
         white-space: break-spaces;
       }
 
@@ -263,55 +263,63 @@ main {
     margin-bottom: 0;
   }
 
-  p:has(.img-link.description-left){
+  > p:not(:has(img)) {
+    &.left, &.right {
+      width: 360px;
+    }
+  }
+
+  p:has(.img-link.description-left) {
     padding: 1rem;
     float: left;
-    width: 50%;   /* 전체의 50% 차지 */
+    width: 50%; /* 전체의 50% 차지 */
     margin-bottom: 0;
   }
 
-  p:has(.img-link.description-left-20){
+  p:has(.img-link.description-left-20) {
     padding: 1rem;
     float: left;
-    width: 20%;   /* 전체의 50% 차지 */
+    width: 20%; /* 전체의 50% 차지 */
     margin-bottom: 0;
   }
 
-  p:has(.img-link.description-right){
+  p:has(.img-link.description-right) {
     padding: 1rem;
     float: right;
-    width: 50%;   /* 전체의 50% 차지 */
+    width: 50%; /* 전체의 50% 차지 */
     margin-bottom: 0;
   }
 
-  p .img-link.description-left img{
-     width: 100%;
-  }
-  p .img-link.description-right img{
-     width: 100%;
+  p .img-link.description-left img {
+    width: 100%;
   }
 
-  .description-left:not(.img-link){
+  p .img-link.description-right img {
+    width: 100%;
+  }
+
+  .description-left:not(.img-link) {
     padding: 1.5rem 1rem;
     float: left;
     width: 50%;
     margin-bottom: 0;
   }
-  .description-right:not(.img-link){
+
+  .description-right:not(.img-link) {
     padding: 1.5rem 1rem;
     float: right;
     width: 50%;
     margin-bottom: 0;
   }
 
-  .description-right-80:not(.img-link){
+  .description-right-80:not(.img-link) {
     padding: 1.5rem 1rem;
     float: right;
     width: 80%;
     margin-bottom: 0;
   }
 
-  hr.description{
+  hr.description {
     opacity: 0.1;
     border: 1px solid #afafaf;
     width: 80%;
@@ -319,7 +327,7 @@ main {
     margin: 1rem 5rem;
   }
 
-  hr.description-hidden{
+  hr.description-hidden {
     opacity: 0;
     border: 1px solid #afafaf;
     width: 80%;
@@ -329,8 +337,8 @@ main {
 
 
   .description-left + .code-description,
-  .description-right + .code-description  {
-    width: 50%;
+  .description-right + .code-description {
+    width: 47%;
   }
 }
 
@@ -367,14 +375,17 @@ main {
   color: transparent;
   display: inline-flex;
 }
-p:has(a.img-link){
-  &:has(.center){
-   align-content : center;
+
+p:has(a.img-link) {
+  &:has(.center) {
+    align-content: center;
   }
-  &:has(.right){
+
+  &:has(.right) {
     float: right;
   }
-  &:has(.left){
+
+  &:has(.left) {
     float: left;
   }
 }
@@ -448,7 +459,7 @@ p:has(a.img-link){
 
 
 /** start: 코드박스 - noline */
-pre:has(.language-noline){
+pre:has(.language-noline) {
   margin-top: .5rem;
   margin-bottom: 1.2em;
   border-radius: 10px;
@@ -456,19 +467,22 @@ pre:has(.language-noline){
   box-shadow: var(--language-border-color) 0 0 0 1px;
   background-color: var(--highlight-bg-color);
 }
-pre:has(.language-noline).no-bg{
+
+pre:has(.language-noline).no-bg {
   background-color: transparent;
 }
+
 /** end 코드박스 - noline */
 
 
 /** start: 코드박스 */
 pre:has(.language-noline),
 .highlighter-rouge {
-  &.left,&.right{  /* 코드 박스 .left .right 있으면, 가로 반으로 줄이기 */
+  &.left, &.right { /* 코드 박스 .left .right 있으면, 가로 반으로 줄이기 */
     width: 47%;
   }
-  &:has(+ p > em){ /* 코드 박스 아래 em 있으면, 코드박스 아래 margin 줄이기 */
+
+  &:has(+ p > em) { /* 코드 박스 아래 em 있으면, 코드박스 아래 margin 줄이기 */
     margin-bottom: 0.3em;
   }
 
@@ -499,7 +513,7 @@ pre:has(.language-noline),
       margin-bottom: 0;
 
       > span,
-      > dl > dt > span{
+      > dl > dt > span {
         width: 50px;
         display: inline-block;
         margin-right: 6px;
@@ -509,21 +523,22 @@ pre:has(.language-noline),
       }
 
       > dl {
-        > *{
+        > * {
           font-weight: 400;
         }
 
-        > dd{
+        > dd {
           margin-left: 3.5rem;
         }
       }
     }
 
-    > li::marker ,{
+    > li::marker, {
       content: "line "
     }
   }
 }
+
 /** end: 코드박스 */
 
 /* --- Effects classes --- */
