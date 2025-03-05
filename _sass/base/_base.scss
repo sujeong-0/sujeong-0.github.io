@@ -487,7 +487,7 @@ pre:has(.language-noline),
   }
 
   + .code-description {
-    margin-top: -15px; /* 특정한 경우 마진 줄이기 */
+    margin-top: 0px; /* 특정한 경우 마진 줄이기 */
   }
 
   + p:has(em):not(:has(img)) {
