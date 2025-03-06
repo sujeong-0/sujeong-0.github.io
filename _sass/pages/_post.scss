@@ -67,8 +67,15 @@ header {
     }
   } /* .license-wrapper */
 
-  .post-meta a:not(:hover) {
-    @extend %link-underline;
+  .post-tags {
+    display: flex;
+  }
+  .post-meta {
+    display: flex;
+
+    a:not(:hover) {
+      @extend %link-underline;
+    }
   }
 
   .share-wrapper {

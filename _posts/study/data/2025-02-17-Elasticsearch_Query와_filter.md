@@ -4,7 +4,7 @@ description: >-
   Elasticsearch에서 Query와 Filter가 무엇인지 알아보고, 둘의  차이점을 알아보자.
 author: ggong
 date: 2024-08-16 12:40:00 +0900
-categories: [ Study, Elasticsearch ]
+categories: [ Study, Data ]
 tags: [ study, elasticsearch, topic, filter, search ]
 pin: false
 media_subpath: '/assets/img/_posts/online-course/elasticsearch'

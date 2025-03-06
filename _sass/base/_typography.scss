@@ -12,17 +12,17 @@
     }
 
     @if $i < 5 {
-      $size-factor: 0.5rem;
+      $size-factor: 0.3rem;  /*h1 설정*/
 
-      @if $i > 1 {
-        $size-factor: 0.45rem;
+      @if $i > 1 {  /*h2~4 설정*/
+        $size-factor: 0.4rem;
 
         main & {
-          @if $i == 2 {
+          @if $i == 2 {  /*h2 설정*/
             margin: 5rem 0 1.25rem;
             color: #1b555c;
             font-weight: 700;
-          } @else {
+          } @else {  /*h3,4 설정*/
             margin: 2rem 0 0.4rem;
           }
         }
@@ -31,7 +31,7 @@
       & {
         font-size: 1rem + (5 - $i) * $size-factor;
       }
-    } @else {
+    } @else {   /*h5 설정*/
       font-size: 1.25rem;
     }
   }
