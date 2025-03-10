@@ -502,40 +502,35 @@ pre:has(.language-noline),
     padding: 0;
     color: #6d6c6c;
   }
+}
+ul.code-description{
+  margin-left: 1rem;
 
+  > li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 4rem;
 
-  + ul.code-description,
-  + p:nth-of-type(1) + ul.code-description {
-    margin-left: 1.5rem;
-
-    > li {
-      margin-top: 0;
-      margin-bottom: 0;
-
-      > span,
-      > dl > dt > span {
-        width: 50px;
-        display: inline-block;
-        margin-right: 6px;
-        color: #6d6c6c;
-        white-space: nowrap;
-        user-select: none;
-      }
-
-      > dl {
-        > * {
-          font-weight: 400;
-        }
-
-        > dd {
-          margin-left: 3.5rem;
-        }
-      }
+    *:not(strong) {
+      font-weight: 400;
     }
 
-    > li::marker, {
-      content: "line "
+    > span,
+    > dl > dt > span {
+      width: 50px;
+      display: inline-block;
+      color: #6d6c6c;
+      white-space: nowrap;
+      user-select: none;
+      margin-left: -60px;
     }
+    > dl > dd{
+      margin-left: 0.3rem;
+    }
+  }
+
+  > li::marker, {
+    content: "line "
   }
 }
 
