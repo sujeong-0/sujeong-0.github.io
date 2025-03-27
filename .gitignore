@@ -18,11 +18,11 @@ package-lock.json
 # IDE configurations
 .idea
 .vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-!.vscode/tasks.json
+.frontmatter/*
+frontmatter.json
+*.code-workspace
+.DS_Store
+
 
 # Misc
-
-
 Gemfile.lock
