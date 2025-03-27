@@ -1,0 +1,97 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": null,
+      "fields": [
+        {
+          "title": "제목 (- 없이 작성)",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "글에 대한 설명",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "작성자",
+          "name": "author",
+          "type": "string",
+          "default": "ggong"
+        },
+        {
+          "title": "작성일시",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "dateFormat": "yyyy-MM-dd HH:mm:ss XXXX"
+        },
+        {
+          "title": "상단 고정",
+          "name": "pin",
+          "type": "boolean",
+          "default": false
+        },
+        {
+          "title": "미디어(이미지, 영상등)의 경로",
+          "name": "media_subpath",
+          "type": "string",
+          "default": "/assets/img/_posts/"
+        },
+        {
+          "title": "태그",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "카테고리",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "참고 자료",
+          "name": "references",
+          "type": "block",
+          "fieldGroup": [
+            "references"
+          ]
+        }
+      ]
+    }
+  ],
+  "frontMatter.framework.id": "jekyll",
+  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts/",
+      "filePrefix": "{{date|yyyy-MM-dd}}"
+    }
+  ],
+  "frontMatter.git.enabled": true,
+  "frontMatter.taxonomy.fieldGroups": [
+    {
+      "id": "references",
+      "labelField": "References",
+      "fields": [
+        {
+          "title": "글 제목",
+          "name": "name",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "URL",
+          "name": "url",
+          "type": "string",
+          "single": true
+        }
+      ]
+    }
+  ],
+  "frontMatter.dashboard.openOnStart": true
+}
