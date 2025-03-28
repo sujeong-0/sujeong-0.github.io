@@ -220,6 +220,10 @@ main {
     white-space: pre-line;
     position: relative;
     padding-left: 13px; /* 마커와 텍스트 사이 간격 */
+
+    > ul, ol{
+      white-space: none;
+    }
   }
 
   dl > dd::before {
