@@ -26,16 +26,5 @@
   // Run tasks in macOS
   "terminal.integrated.profiles.osx": {
     "zsh": { "path": "/bin/zshrc", "args": ["-l", "-i"] }
-  },
-  "frontMatter.dashboard.openOnStart": true,
-  "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
-  "frontMatter.preview.host": "http://localhost:4000",
-  "frontMatter.content.pageFolders": [
-    {
-      "title": "posts",
-      "path": "[[workspace]]/_posts"
-    }
-  ],
-  "frontMatter.git.enabled": true
+  }
 }
